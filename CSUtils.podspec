@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CSUtils'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'A short description of CSUtils.'
 
 # This description is used to generate tags and improve search results.
@@ -26,7 +26,7 @@ TODO: Add long description of the pod here.
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'salllgado@hotmail.com.br' => 'Chrystian Salgado' }
   s.source           = { :git => 'https://github.com/salllgado@hotmail.com.br/CSUtils.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/salllgadin'
+  s.social_media_url = 'https://twitter.com/salllgadin'
 
   s.ios.deployment_target = '10.0'
 

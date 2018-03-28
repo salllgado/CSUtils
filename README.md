@@ -22,7 +22,7 @@ pod 'CSUtils'
 
 ## Author
 
-salllgado@hotmail.com.br, salllgado@hotmail.com.br
+salllgado@hotmail.com.br, Chrystian Salgado
 
 ## License
 
