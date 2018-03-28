@@ -1,0 +1,16 @@
+PODS:
+  - CSUtils (0.1.0)
+
+DEPENDENCIES:
+  - CSUtils (from `../`)
+
+EXTERNAL SOURCES:
+  CSUtils:
+    :path: ../
+
+SPEC CHECKSUMS:
+  CSUtils: 440444eeb00dad3242db5634ec387d95ea311e07
+
+PODFILE CHECKSUM: c3988c414ff0f91db4b4d895adcb73c6fe26ee49
+
+COCOAPODS: 1.4.0
