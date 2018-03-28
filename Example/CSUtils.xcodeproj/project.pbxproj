@@ -12,6 +12,9 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
+		B86A0460206BE3B3007B5BFD /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B86A045D206BE3B2007B5BFD /* README.md */; };
+		B86A0461206BE3B3007B5BFD /* CSUtils.podspec in Resources */ = {isa = PBXBuildFile; fileRef = B86A045E206BE3B3007B5BFD /* CSUtils.podspec */; };
+		B86A0462206BE3B3007B5BFD /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = B86A045F206BE3B3007B5BFD /* LICENSE */; };
 		F1F3E670A87E69119F4CF8EE /* Pods_CSUtils_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9FCFA4AE18E2743949CD441 /* Pods_CSUtils_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +29,9 @@
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		6CF965712FAB9E969D3D02E8 /* Pods-CSUtils_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSUtils_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-CSUtils_Example/Pods-CSUtils_Example.release.xcconfig"; sourceTree = "<group>"; };
+		B86A045D206BE3B2007B5BFD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
+		B86A045E206BE3B3007B5BFD /* CSUtils.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = CSUtils.podspec; path = ../../CSUtils.podspec; sourceTree = "<group>"; };
+		B86A045F206BE3B3007B5BFD /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../../LICENSE; sourceTree = "<group>"; };
 		BA92EFDB67ED1AECF13F1D22 /* Pods_CSUtils_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CSUtils_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C96DE620EA4C4B8A8271003D /* Pods-CSUtils_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSUtils_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CSUtils_Tests/Pods-CSUtils_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		E9FCFA4AE18E2743949CD441 /* Pods_CSUtils_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CSUtils_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,6 +63,7 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				B86A045C206BE36B007B5BFD /* Metadata */,
 				607FACD21AFB9204008FA782 /* Example for CSUtils */,
 				607FACD11AFB9204008FA782 /* Products */,
 				25045C08BCF6BE172E53519B /* Pods */,
@@ -101,6 +108,17 @@
 				BA92EFDB67ED1AECF13F1D22 /* Pods_CSUtils_Tests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B86A045C206BE36B007B5BFD /* Metadata */ = {
+			isa = PBXGroup;
+			children = (
+				B86A045E206BE3B3007B5BFD /* CSUtils.podspec */,
+				B86A045F206BE3B3007B5BFD /* LICENSE */,
+				B86A045D206BE3B2007B5BFD /* README.md */,
+			);
+			name = Metadata;
+			path = CSUtils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,8 +184,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B86A0462206BE3B3007B5BFD /* LICENSE in Resources */,
+				B86A0461206BE3B3007B5BFD /* CSUtils.podspec in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				B86A0460206BE3B3007B5BFD /* README.md in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
