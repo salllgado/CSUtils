@@ -23,6 +23,7 @@ pod 'CSUtils'
 ## Author
 
 salllgado@hotmail.com.br, Chrystian Salgado
+Twitter: https://twitter.com/salllgadin
 
 ## License
 
