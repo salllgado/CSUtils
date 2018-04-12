@@ -1,15 +1,12 @@
 //
-//  CSAlerts.swift
-//  Pods-CSUtils_Example
+//  File.swift
+//  CSUtils
 //
-//  Created by Chrystian Salgado on 28/03/2018.
+//  Created by Chrystian on 12/04/2018.
 //
 
 import Foundation
 
-public class CSAlerts {
-
-    public func showAlertController(){
-        print("show some alert")
-    }
+class CSAlerts: <#super class#> {
+    <#code#>
 }
