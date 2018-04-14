@@ -6,3 +6,28 @@
 //
 
 import Foundation
+import UIKit
+
+class CSLocalizations {
+    
+    /*
+     - Seta uma localização definida por string
+     - Parameter: String
+     - Return: NSLocalizedString
+     */
+    func setLocalizableText(_ text: String) -> String {
+        return NSLocalizedString(text, comment: "")
+    }
+    
+    func haveEmptyFields(_ fields: [UITextField]) -> Bool {
+        var emptyField: Bool!
+        for field in fields {
+            if let text = field.text {
+                if text.isEmpty || text == " " {
+                    emptyField = true
+                }
+            }
+        }
+        return emptyField == true ? emptyField : false
+    }
+}

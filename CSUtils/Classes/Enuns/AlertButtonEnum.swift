@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+public enum AlertButtonEnum {
+    case OK
+    case CANCEL
+    case DISMISS
+}
