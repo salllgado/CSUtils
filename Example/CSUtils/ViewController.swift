@@ -16,7 +16,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func showSimpleAlert(_ sender: Any) {
-        _ = CSUtils.showAlertController()
+        let alert = CSUtils.showAlertController("Alerta de Teste", mensage: "Teste, teste, teste", alertButtons: [.DISMISS], completion: { (_) -> Void? in return })
+        present(alert, animated: true, completion: nil)
         
     }
     

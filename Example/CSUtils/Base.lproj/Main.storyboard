@@ -51,9 +51,6 @@
                             <constraint firstItem="7UK-op-3qE" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="16" id="Qjd-wH-rvB"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="showCustomWebView" destination="Dkc-Br-Kdi" id="zmp-lU-Ddg"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
