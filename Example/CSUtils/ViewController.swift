@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Pods_CSUtils_Example
+import CSUtils
 
 class ViewController: UIViewController {
     
@@ -16,7 +16,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func showSimpleAlert(_ sender: Any) {
-        let alert = CSAlerts().showAlertController()
+        _ = CSUtils.showAlertController()
+        
     }
     
     @IBAction func showCustomWebView(_ sender: Any) {

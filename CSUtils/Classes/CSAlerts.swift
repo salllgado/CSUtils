@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  CSAlerts.swift
 //  CSUtils
 //
 //  Created by Chrystian on 12/04/2018.
@@ -7,6 +7,9 @@
 
 import Foundation
 
-class CSAlerts: <#super class#> {
-    <#code#>
+class CSAlerts {
+    
+    func configureSimple() {
+        print("Simple Alerts")
+    }
 }

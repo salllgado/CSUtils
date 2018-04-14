@@ -12,6 +12,7 @@ open class CSUtils {
     init (){}
 
     open class func showAlertController() {
-        self.buildAlert()
+        let alerts = CSAlerts()
+        alerts.configureSimple()
     }
 }
