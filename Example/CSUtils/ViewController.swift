@@ -15,12 +15,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    @IBAction func showSimpleAlert(_ sender: Any) {
-        let alert = CSUtils.showAlertController("Alerta de Teste", mensage: "Teste, teste, teste", alertButtons: [.DISMISS], completion: { (_) -> Void? in return })
-        present(alert, animated: true, completion: nil)
-        
-    }
-    
     @IBAction func showCustomWebView(_ sender: Any) {
         
     }
