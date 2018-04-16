@@ -28,7 +28,7 @@ class AlertExemplesController: UIViewController {
     }
     
     @IBAction func simpleAlertWithAction(_ sender: Any) {
-        let alert = CSUtils.showAlertController(alertTitle, mensage: alertMensage, alertButtons: [.CANCEL, .OK]) {_ in
+        let alert = CSUtils.showAlertController(alertTitle, mensage: alertMensage, alertButtons: [.CANCEL, .OK], UIColor.red) {_ in
             let alertBefore = CSUtils.showAlertController(self.alertTitle, mensage: self.alertMensage, alertButtons: [.DISMISS], completion: { (_) -> Void? in return })
             self.present(alertBefore, animated: true, completion: nil)
             return nil
