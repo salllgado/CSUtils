@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="7UK-op-3qE">
-                                <rect key="frame" x="32" y="119.99999999999999" width="311" height="163.66666666666663"/>
+                                <rect key="frame" x="32" y="119.99999999999999" width="311" height="209.66666666666663"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rKG-z1-MTL">
                                         <rect key="frame" x="0.0" y="0.0" width="311" height="44"/>
@@ -45,6 +45,13 @@
                                         <rect key="frame" x="0.0" y="119.66666666666666" width="311" height="44"/>
                                         <state key="normal" title="JSON Exemples"/>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z7m-G8-Xng">
+                                        <rect key="frame" x="0.0" y="179.66666666666669" width="311" height="30"/>
+                                        <state key="normal" title="Show Style View"/>
+                                        <connections>
+                                            <action selector="showStylesView:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="nD0-zz-LWM"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -64,6 +71,9 @@
                         <viewLayoutGuide key="safeArea" id="nuv-M1-QJG"/>
                     </view>
                     <navigationItem key="navigationItem" id="PwC-8Z-yV3"/>
+                    <connections>
+                        <outlet property="styleButtonExemple" destination="Z7m-G8-Xng" id="zCH-li-uAq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
