@@ -11,18 +11,21 @@ import CSUtils
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var styleButtonExemple: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    @IBAction func showSimpleAlert(_ sender: Any) {
-        let alert = CSUtils.showAlertController("Alerta de Teste", mensage: "Teste, teste, teste", alertButtons: [.DISMISS], completion: { (_) -> Void? in return })
-        present(alert, animated: true, completion: nil)
-        
+    @IBAction func showCustomWebView(_ sender: Any) {
+//        CSUtils.
     }
     
-    @IBAction func showCustomWebView(_ sender: Any) {
-        
+    
+    @IBAction func showStylesView(_ sender: Any) {
+        var arrayOfButtons: [UIButton] = []
+        arrayOfButtons.append(styleButtonExemple)
+        CSUtils.setButtonStyle(arrayOfButtons, textColor: UIColor.yellow, backgoundColor: UIColor.black, borderColor: UIColor.yellow, rounded: 10)
     }
 }
 
