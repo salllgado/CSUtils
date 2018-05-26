@@ -19,6 +19,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y9p-vP-OgY">
+                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="e2K-AT-fDD"/>
+                                </items>
+                            </navigationBar>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="7UK-op-3qE">
                                 <rect key="frame" x="32" y="119.99999999999999" width="311" height="209.66666666666663"/>
                                 <subviews>
@@ -62,16 +68,21 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="7UK-op-3qE" firstAttribute="top" secondItem="y9p-vP-OgY" secondAttribute="bottom" constant="32" id="4W9-yd-4st"/>
                             <constraint firstItem="7UK-op-3qE" firstAttribute="centerX" secondItem="nuv-M1-QJG" secondAttribute="centerX" id="9CI-lD-fw1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7UK-op-3qE" secondAttribute="trailing" constant="16" id="KNe-Vj-vEf"/>
                             <constraint firstItem="nuv-M1-QJG" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="7UK-op-3qE" secondAttribute="bottom" constant="16" id="Kns-GN-abq"/>
-                            <constraint firstItem="7UK-op-3qE" firstAttribute="top" secondItem="nuv-M1-QJG" secondAttribute="top" constant="32" id="MRK-Kc-s80"/>
                             <constraint firstItem="7UK-op-3qE" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="16" id="Qjd-wH-rvB"/>
+                            <constraint firstItem="y9p-vP-OgY" firstAttribute="leading" secondItem="nuv-M1-QJG" secondAttribute="leading" id="lFU-Gt-S0v"/>
+                            <constraint firstItem="y9p-vP-OgY" firstAttribute="trailing" secondItem="nuv-M1-QJG" secondAttribute="trailing" id="lul-Qd-iGv"/>
+                            <constraint firstItem="y9p-vP-OgY" firstAttribute="top" secondItem="nuv-M1-QJG" secondAttribute="top" id="wxe-Gw-gUh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nuv-M1-QJG"/>
                     </view>
                     <navigationItem key="navigationItem" id="PwC-8Z-yV3"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="navigationBar" destination="y9p-vP-OgY" id="h1Y-d9-6Jo"/>
                         <outlet property="styleButtonExemple" destination="Z7m-G8-Xng" id="zCH-li-uAq"/>
                     </connections>
                 </viewController>
