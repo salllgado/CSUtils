@@ -12,9 +12,11 @@ import CSUtils
 class ViewController: UIViewController {
     
     @IBOutlet weak var styleButtonExemple: UIButton!
+    @IBOutlet weak var navigationBar: UINavigationBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        CSUtils.setNavBarStyle(navigationBar, barColor: UIColor.red, tintColor: UIColor.black, navBarBorderColor: UIColor.yellow)
     }
     
     @IBAction func showCustomWebView(_ sender: Any) {
