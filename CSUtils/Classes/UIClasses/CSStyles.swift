@@ -20,7 +20,7 @@ class CSStyles {
             }
             
             if let borderColor = borderColor {
-                button.borderColor = borderColor
+                button.layer.borderColor = borderColor.cgColor
             }
             
             if let rounded = rounded {
@@ -46,16 +46,17 @@ class CSStyles {
     }
     
     func setViewStyle(_ view: UIView, cornerRadius: Int?, borderColor: UIColor?, borderWidth: Int?, backgroundColor: UIColor?) {
-        if let cornerRadius = cornerRadius {
-            view.cornerRadius = CGFloat(cornerRadius)
+        
+        if let borderColor = borderColor {
+            view.layer.borderColor = borderColor.cgColor
         }
         
         if let borderWidth = borderWidth {
-            view.borderWidth = CGFloat(borderWidth)
+            view.layer.borderWidth = CGFloat(borderWidth)
         }
         
-        if let borderColor = borderColor {
-            view.borderColor = borderColor
+        if let cornerRadius = cornerRadius {
+            view.layer.cornerRadius = CGFloat(cornerRadius)
         }
         
         if let backgroundColor = backgroundColor {
@@ -63,17 +64,13 @@ class CSStyles {
         }
     }
     
-    func setNavBarStyle(_ navigationBar: UINavigationBar, barColor: UIColor?, tintColor: UIColor?, navBarBorderColor: UIColor?) {
+    func setNavBarStyle(_ navigationBar: UINavigationBar, barColor: UIColor?, tintColor: UIColor?) {
         if let barColor = barColor {
             navigationBar.barTintColor = barColor
         }
         
         if let tintColor = tintColor {
             navigationBar.tintColor = tintColor
-        }
-        
-        if let navBarBorderColor = navBarBorderColor {
-            navigationBar.borderColor = navBarBorderColor
         }
     }
 }
