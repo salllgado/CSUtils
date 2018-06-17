@@ -19,9 +19,9 @@ class CSStyles {
                 button.backgroundColor = backgoundColor
             }
             
-//            if let borderColor = borderColor {
-//                button.borderColor = borderColor
-//            }
+            if let borderColor = borderColor {
+                button.layer.borderColor = borderColor.cgColor
+            }
             
             if let rounded = rounded {
                 button.layer.cornerRadius = CGFloat(rounded)
@@ -46,24 +46,25 @@ class CSStyles {
     }
     
     func setViewStyle(_ view: UIView, cornerRadius: Int?, borderColor: UIColor?, borderWidth: Int?, backgroundColor: UIColor?) {
-//        if let cornerRadius = cornerRadius {
-//            view.cornerRadius = CGFloat(cornerRadius)
-//        }
-//
-//        if let borderWidth = borderWidth {
-//            view.borderWidth = CGFloat(borderWidth)
-//        }
-//
-//        if let borderColor = borderColor {
-//            view.borderColor = borderColor
-//        }
-//
-//        if let backgroundColor = backgroundColor {
-//            view.backgroundColor = backgroundColor
-//        }
+        
+        if let borderColor = borderColor {
+            view.layer.borderColor = borderColor.cgColor
+        }
+        
+        if let borderWidth = borderWidth {
+            view.layer.borderWidth = CGFloat(borderWidth)
+        }
+        
+        if let cornerRadius = cornerRadius {
+            view.layer.cornerRadius = CGFloat(cornerRadius)
+        }
+        
+        if let backgroundColor = backgroundColor {
+            view.backgroundColor = backgroundColor
+        }
     }
     
-    func setNavBarStyle(_ navigationBar: UINavigationBar, barColor: UIColor?, tintColor: UIColor?, navBarBorderColor: UIColor?) {
+    func setNavBarStyle(_ navigationBar: UINavigationBar, barColor: UIColor?, tintColor: UIColor?) {
         if let barColor = barColor {
             navigationBar.barTintColor = barColor
         }
@@ -71,9 +72,5 @@ class CSStyles {
         if let tintColor = tintColor {
             navigationBar.tintColor = tintColor
         }
-        
-//        if let navBarBorderColor = navBarBorderColor {
-//            navigationBar.borderColor = navBarBorderColor
-//        }
     }
 }

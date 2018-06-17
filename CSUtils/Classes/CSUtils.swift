@@ -54,6 +54,6 @@ extension CSUtils {
     }
     
     open class func setNavBarStyle(_ navigationBar: UINavigationBar, barColor: UIColor?, tintColor: UIColor?, navBarBorderColor: UIColor?) {
-        _ = CSStyles().setNavBarStyle(navigationBar, barColor: barColor, tintColor: tintColor, navBarBorderColor: navBarBorderColor)
+        _ = CSStyles().setNavBarStyle(navigationBar, barColor: barColor, tintColor: tintColor)
     }
 }
