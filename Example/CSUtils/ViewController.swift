@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        CSUtils.setNavBarStyle(navigationBar, barColor: UIColor.red, tintColor: UIColor.black, navBarBorderColor: UIColor.yellow)
+        CSUtils.setNavBarStyle(navigationBar, barColor: UIColor.red, tintColor: UIColor.black)
     }
     
     @IBAction func showCustomWebView(_ sender: Any) {
