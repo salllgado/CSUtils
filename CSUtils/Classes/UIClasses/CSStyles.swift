@@ -19,9 +19,9 @@ class CSStyles {
                 button.backgroundColor = backgoundColor
             }
             
-            if let borderColor = borderColor {
-                button.borderColor = borderColor
-            }
+//            if let borderColor = borderColor {
+//                button.borderColor = borderColor
+//            }
             
             if let rounded = rounded {
                 button.layer.cornerRadius = CGFloat(rounded)
@@ -46,21 +46,21 @@ class CSStyles {
     }
     
     func setViewStyle(_ view: UIView, cornerRadius: Int?, borderColor: UIColor?, borderWidth: Int?, backgroundColor: UIColor?) {
-        if let cornerRadius = cornerRadius {
-            view.cornerRadius = CGFloat(cornerRadius)
-        }
-        
-        if let borderWidth = borderWidth {
-            view.borderWidth = CGFloat(borderWidth)
-        }
-        
-        if let borderColor = borderColor {
-            view.borderColor = borderColor
-        }
-        
-        if let backgroundColor = backgroundColor {
-            view.backgroundColor = backgroundColor
-        }
+//        if let cornerRadius = cornerRadius {
+//            view.cornerRadius = CGFloat(cornerRadius)
+//        }
+//
+//        if let borderWidth = borderWidth {
+//            view.borderWidth = CGFloat(borderWidth)
+//        }
+//
+//        if let borderColor = borderColor {
+//            view.borderColor = borderColor
+//        }
+//
+//        if let backgroundColor = backgroundColor {
+//            view.backgroundColor = backgroundColor
+//        }
     }
     
     func setNavBarStyle(_ navigationBar: UINavigationBar, barColor: UIColor?, tintColor: UIColor?, navBarBorderColor: UIColor?) {
@@ -72,8 +72,8 @@ class CSStyles {
             navigationBar.tintColor = tintColor
         }
         
-        if let navBarBorderColor = navBarBorderColor {
-            navigationBar.borderColor = navBarBorderColor
-        }
+//        if let navBarBorderColor = navBarBorderColor {
+//            navigationBar.borderColor = navBarBorderColor
+//        }
     }
 }
