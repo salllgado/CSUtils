@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  CSUtils
+
+  Created by Chrystian on 14/04/2018.
+  Copyright © 2018 CocoaPods. All rights reserved.
+*/
+
+"OK!" = "OK!";
+"CANCEL" = "Cancelar";
+"DISMISS" = "Esquecer";
+"TITULO_ALERTA_TESTE" = "Titulo";
+"MENSAGEM_ALERTA_TESTE" = "Mensagem";
