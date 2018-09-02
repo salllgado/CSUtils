@@ -1,5 +1,5 @@
 PODS:
-  - CSUtils (0.1.1)
+  - CSUtils (1.1.2)
 
 DEPENDENCIES:
   - CSUtils (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  CSUtils: aa2046de1e79df9a88a7f75f275ba1d43be88d6a
+  CSUtils: f57c6304d17a6576a5c4135bc36726cfb9bcf0ce
 
 PODFILE CHECKSUM: 0294df814e38d3fabf21d945ea3716ae561e4934
 
