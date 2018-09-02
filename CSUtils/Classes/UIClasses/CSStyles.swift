@@ -29,14 +29,10 @@ class CSStyles {
         }
     }
     
-    func setLabelStyle(_ labels: [UILabel], textColor: UIColor?, shadowColor: UIColor?, alignment: NSTextAlignment?) {
+    func setLabelStyle(_ labels: [UILabel], textColor: UIColor?, alignment: NSTextAlignment?) {
         for label in labels {
             if let textColor = textColor {
                 label.textColor = textColor
-            }
-            
-            if let shadowColor = shadowColor {
-                label.shadowColor = shadowColor
             }
             
             if let alignment = alignment {
