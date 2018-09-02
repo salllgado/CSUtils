@@ -45,8 +45,8 @@ extension CSUtils {
         _ = CSStyles().setButtonStyle(buttons, textColor: textColor, backgoundColor: backgoundColor, borderColor: borderColor, rounded: rounded)
     }
     
-    open class func setLabelStyle(_ labels: [UILabel], textColor: UIColor? = nil, shadowColor: UIColor? = nil, alignment: NSTextAlignment? = nil) {
-        _ = CSStyles().setLabelStyle(labels, textColor: textColor, shadowColor: shadowColor, alignment: alignment)
+    open class func setLabelStyle(_ labels: [UILabel], textColor: UIColor? = nil, alignment: NSTextAlignment? = nil) {
+        _ = CSStyles().setLabelStyle(labels, textColor: textColor, alignment: alignment)
     }
     
     open class func setViewStyle(_ view: UIView, cornerRadius: Int?, borderColor: UIColor?, borderWidth: Int?, backgroundColor: UIColor?) {
