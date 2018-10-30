@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,8 @@
 		8C84FE642617A3197EA06F0BE73C598C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		8CBB8A849538A218F31E997228BEE5E6 /* CSUtils-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EFC2F993DA177DBCA44A7CD0B2DE9677 /* CSUtils-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AE61ECD1982086B09947ADA862EB6655 /* CSUtils-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A81DA3BE3CEE1D7C5D8CF8DEA8535DA /* CSUtils-dummy.m */; };
+		B84E102A217B81F6007EF5E6 /* SettingsControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84E1029217B81F6007EF5E6 /* SettingsControllerTableViewController.swift */; };
+		B84E102C217B82B4007EF5E6 /* SwitchSettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84E102B217B82B4007EF5E6 /* SwitchSettingsCell.swift */; };
 		CDC5348AACEAB6B39410A4046FB052B2 /* CSLocalizations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A93581C46A3C226870A8ECDAC42D5A /* CSLocalizations.swift */; };
 		EB3DF4C6C9319733A7F368109B84AB4E /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810EB898409749A94D2FD86829851715 /* ToastView.swift */; };
 		FAA69161AB69792BD982FA66E01C0F79 /* CSUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573FADEB9410D9CF807282D43F2BA9B9 /* CSUtils.swift */; };
@@ -33,7 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0478B3387C445A44F7D2AB6CC7B66E7F /* CSUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CSUtils.framework; path = CSUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0478B3387C445A44F7D2AB6CC7B66E7F /* CSUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CSUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CAA3B35FC848E1E9A14CEB6A123B65A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3578E45FE0A57E1D9D78039465A9CA22 /* Pods-CSUtils_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CSUtils_Example.release.xcconfig"; sourceTree = "<group>"; };
 		36A93581C46A3C226870A8ECDAC42D5A /* CSLocalizations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CSLocalizations.swift; sourceTree = "<group>"; };
@@ -50,9 +52,14 @@
 		7C0B79A36E3378C0EBA6841704F7ED5F /* CSUtils.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CSUtils.xcconfig; sourceTree = "<group>"; };
 		810EB898409749A94D2FD86829851715 /* ToastView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 		8C9FEE833CCC037A2438D55CD6513071 /* CSStyles.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CSStyles.swift; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		949C14E0984D0D8851DA450CF8DC863B /* Pods_CSUtils_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CSUtils_Example.framework; path = "Pods-CSUtils_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		949C14E0984D0D8851DA450CF8DC863B /* Pods_CSUtils_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CSUtils_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B008C1E2A3745FAFF6415AE21B6327E7 /* Pods-CSUtils_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CSUtils_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B84E1025217B63A3007EF5E6 /* ToastView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToastView.xib; sourceTree = "<group>"; };
+		B84E1026217B813C007EF5E6 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		B84E1027217B81CD007EF5E6 /* SwitchSettingsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwitchSettingsCell.xib; sourceTree = "<group>"; };
+		B84E1029217B81F6007EF5E6 /* SettingsControllerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsControllerTableViewController.swift; sourceTree = "<group>"; };
+		B84E102B217B82B4007EF5E6 /* SwitchSettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchSettingsCell.swift; sourceTree = "<group>"; };
 		BA56A01CADCC455E9C5998FF14ECE866 /* AlertButtonEnum.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AlertButtonEnum.swift; sourceTree = "<group>"; };
 		BBF03AF77902D4D0BEE050F68B64CE54 /* Pods-CSUtils_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CSUtils_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		C70B8F40D511AD8DFF144674B5169AED /* Pods-CSUtils_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CSUtils_Example-resources.sh"; sourceTree = "<group>"; };
@@ -105,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				810EB898409749A94D2FD86829851715 /* ToastView.swift */,
+				B84E102B217B82B4007EF5E6 /* SwitchSettingsCell.swift */,
 			);
 			name = Views;
 			path = CSUtils/Classes/Views;
@@ -160,8 +168,10 @@
 			children = (
 				573FADEB9410D9CF807282D43F2BA9B9 /* CSUtils.swift */,
 				5CDB3D042AED25DF5398E753C5476D4B /* CSUtils+IB.swift */,
+				B84E1028217B81DF007EF5E6 /* Controllers */,
 				5F37409990B2FE891D750316A43B5DA2 /* Enuns */,
 				6FA97D852EF7764F5A39E2A0A1ADA337 /* Localizations */,
+				B84E1024217B6361007EF5E6 /* Resources */,
 				DDCB070F4D2425AD28E279230355DCA5 /* Support Files */,
 				282732BDAC66D7535DD8BB282CD1D547 /* UIClasses */,
 				5C4F42ECA3F45229F9A26626BCD0F46C /* Views */,
@@ -186,6 +196,25 @@
 			);
 			name = "Pods-CSUtils_Example";
 			path = "Target Support Files/Pods-CSUtils_Example";
+			sourceTree = "<group>";
+		};
+		B84E1024217B6361007EF5E6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B84E1025217B63A3007EF5E6 /* ToastView.xib */,
+				B84E1026217B813C007EF5E6 /* Settings.storyboard */,
+				B84E1027217B81CD007EF5E6 /* SwitchSettingsCell.xib */,
+			);
+			name = Resources;
+			path = CSUtils/Assets/Resources;
+			sourceTree = "<group>";
+		};
+		B84E1028217B81DF007EF5E6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B84E1029217B81F6007EF5E6 /* SettingsControllerTableViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -311,7 +340,9 @@
 				5893934EC438B6B0F4C9DE7989F9FE2D /* CSAlerts.swift in Sources */,
 				CDC5348AACEAB6B39410A4046FB052B2 /* CSLocalizations.swift in Sources */,
 				FC2C8C0F38D131603F92ED7DCB5AEB29 /* CSStyles.swift in Sources */,
+				B84E102C217B82B4007EF5E6 /* SwitchSettingsCell.swift in Sources */,
 				43A66EDF17EF7F7BB1D7A618D1C92030 /* CSUtils+IB.swift in Sources */,
+				B84E102A217B81F6007EF5E6 /* SettingsControllerTableViewController.swift in Sources */,
 				AE61ECD1982086B09947ADA862EB6655 /* CSUtils-dummy.m in Sources */,
 				FAA69161AB69792BD982FA66E01C0F79 /* CSUtils.swift in Sources */,
 				EB3DF4C6C9319733A7F368109B84AB4E /* ToastView.swift in Sources */,
@@ -355,11 +386,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-CSUtils_Example/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-CSUtils_Example/Pods-CSUtils_Example.modulemap";
 				OTHER_LDFLAGS = "";
@@ -453,11 +480,7 @@
 				INFOPLIST_FILE = "Target Support Files/CSUtils/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/CSUtils/CSUtils.modulemap";
 				PRODUCT_NAME = CSUtils;
 				SDKROOT = iphoneos;
@@ -552,11 +575,7 @@
 				INFOPLIST_FILE = "Target Support Files/CSUtils/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/CSUtils/CSUtils.modulemap";
 				PRODUCT_NAME = CSUtils;
 				SDKROOT = iphoneos;
@@ -588,11 +607,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-CSUtils_Example/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-CSUtils_Example/Pods-CSUtils_Example.modulemap";
 				OTHER_LDFLAGS = "";

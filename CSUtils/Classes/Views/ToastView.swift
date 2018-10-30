@@ -11,40 +11,47 @@ open class ToastView: UIView {
 
     @IBOutlet var lbMessage: UILabel!
     
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        commonInit()
+    }
+    
+    required public init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        commonInit()
+    }
+    
     override open func awakeFromNib() {
         super.awakeFromNib()
     }
     
-    func configure(message: String?) {
-        if let message = message {
-            lbMessage.text = message
-        }
-        
-        self.alpha = 0
-        self.isHidden = true
+    private func commonInit() {
+        let bundle = Bundle(for: self.classForCoder)
+        bundle.loadNibNamed("ToastView", owner: self, options: nil)
     }
     
-    fileprivate func showToastView(for seconds: TimeInterval, in viewController: UIViewController, completion: ((Bool)->Void)?) {
-        guard let window = viewController.view.window else {
-            return
-        }
-        
-        self.layer.cornerRadius = (self.frame.height / 2)
-        self.alpha = 0.6
-        
-        self.translatesAutoresizingMaskIntoConstraints = false
-        viewController.view.window?.addSubview(self)
-        viewController.view.window?.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[toastView]-32-|", options: .alignAllCenterX, metrics: nil, views: ["toastView": self]))
-        
-        // https://stackoverflow.com/a/19855224/5660157
-        self.centerXAnchor.constraint(equalTo: window.centerXAnchor).isActive = true
-        
-        UIView.animate(withDuration: seconds, animations: {
-            self.alpha = 0.0
-        }, completion: completion)
-    }
-    
-    open func removeToastView() {
-        self.removeFromSuperview()
-    }
+//    open func configure(message: String?) {
+//        if let message = message {
+//            lbMessage.text = message
+//        }
+//
+//        self.alpha = 0
+//        self.isHidden = true
+//    }
+//
+//    open func showToastView(for seconds: TimeInterval, completion: ((Bool)->Void)?) {
+//
+//        self.layer.cornerRadius = (self.frame.height / 2)
+//        self.alpha = 0.6
+//
+//
+//
+//        UIView.animate(withDuration: seconds, animations: {
+//            self.alpha = 0.0
+//        }, completion: completion)
+//    }
+//
+//    open func removeToastView() {
+//        self.removeFromSuperview()
+//    }
 }
