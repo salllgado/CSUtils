@@ -25,7 +25,7 @@
                                 </items>
                             </navigationBar>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="7UK-op-3qE">
-                                <rect key="frame" x="32" y="120" width="311" height="210"/>
+                                <rect key="frame" x="32" y="120" width="311" height="150"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rKG-z1-MTL">
                                         <rect key="frame" x="0.0" y="0.0" width="311" height="44"/>
@@ -39,19 +39,12 @@
                                             <segue destination="OtI-Ku-e9Y" kind="show" id="Dpb-O7-2KV"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dkc-Br-Kdi">
-                                        <rect key="frame" x="0.0" y="60" width="311" height="44"/>
-                                        <state key="normal" title="ToastView Exemple"/>
-                                        <connections>
-                                            <action selector="showCustomToastView:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="yXb-nt-dts"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RXb-TZ-nOZ">
-                                        <rect key="frame" x="0.0" y="120" width="311" height="44"/>
+                                        <rect key="frame" x="0.0" y="60" width="311" height="44"/>
                                         <state key="normal" title="JSON Exemples"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z7m-G8-Xng">
-                                        <rect key="frame" x="0.0" y="180" width="311" height="30"/>
+                                        <rect key="frame" x="0.0" y="120" width="311" height="30"/>
                                         <state key="normal" title="Show Style View"/>
                                         <connections>
                                             <action selector="showStylesView:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="nD0-zz-LWM"/>
@@ -61,7 +54,6 @@
                                 <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="RXb-TZ-nOZ" firstAttribute="height" secondItem="rKG-z1-MTL" secondAttribute="height" id="WIe-BL-V5f"/>
-                                    <constraint firstItem="Dkc-Br-Kdi" firstAttribute="height" secondItem="rKG-z1-MTL" secondAttribute="height" id="yoG-U9-cH9"/>
                                 </constraints>
                             </stackView>
                         </subviews>
