@@ -19,11 +19,6 @@ class ViewController: UIViewController {
         CSUtils.setNavBarStyle(navigationBar, barColor: UIColor.red, tintColor: UIColor.black)
     }
     
-    @IBAction func showCustomWebView(_ sender: Any) {
-//        CSUtils.
-    }
-    
-    
     @IBAction func showStylesView(_ sender: Any) {
         var arrayOfButtons: [UIButton] = []
         arrayOfButtons.append(styleButtonExemple)

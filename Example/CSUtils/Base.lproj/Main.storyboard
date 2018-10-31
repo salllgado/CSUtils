@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bUD-JM-rnh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bUD-JM-rnh">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -26,7 +25,7 @@
                                 </items>
                             </navigationBar>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="7UK-op-3qE">
-                                <rect key="frame" x="32" y="119.99999999999999" width="311" height="209.66666666666663"/>
+                                <rect key="frame" x="32" y="120" width="311" height="150"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rKG-z1-MTL">
                                         <rect key="frame" x="0.0" y="0.0" width="311" height="44"/>
@@ -40,19 +39,12 @@
                                             <segue destination="OtI-Ku-e9Y" kind="show" id="Dpb-O7-2KV"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dkc-Br-Kdi">
-                                        <rect key="frame" x="0.0" y="60" width="311" height="43.666666666666657"/>
-                                        <state key="normal" title="WebView Exemples"/>
-                                        <connections>
-                                            <action selector="showCustomWebView:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="bfj-hB-ncb"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RXb-TZ-nOZ">
-                                        <rect key="frame" x="0.0" y="119.66666666666666" width="311" height="44"/>
+                                        <rect key="frame" x="0.0" y="60" width="311" height="44"/>
                                         <state key="normal" title="JSON Exemples"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z7m-G8-Xng">
-                                        <rect key="frame" x="0.0" y="179.66666666666669" width="311" height="30"/>
+                                        <rect key="frame" x="0.0" y="120" width="311" height="30"/>
                                         <state key="normal" title="Show Style View"/>
                                         <connections>
                                             <action selector="showStylesView:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="nD0-zz-LWM"/>
@@ -62,7 +54,6 @@
                                 <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="RXb-TZ-nOZ" firstAttribute="height" secondItem="rKG-z1-MTL" secondAttribute="height" id="WIe-BL-V5f"/>
-                                    <constraint firstItem="Dkc-Br-Kdi" firstAttribute="height" secondItem="rKG-z1-MTL" secondAttribute="height" id="yoG-U9-cH9"/>
                                 </constraints>
                             </stackView>
                         </subviews>
