@@ -8,6 +8,7 @@
 import Foundation
 
 public extension String {
+    
     func toInt() -> Int? {
         return Int(self)
     }

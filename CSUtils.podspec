@@ -36,7 +36,6 @@ TODO: Add long description of the pod here.
   #   'CSUtils' => ['CSUtils/Assets/*.png']
   # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'TPKeyboardAvoiding'
+  s.dependency 'IBLocalizable'
 end

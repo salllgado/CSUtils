@@ -270,10 +270,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CSUtils_Example/Pods-CSUtils_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/CSUtils/CSUtils.framework",
+				"${BUILT_PRODUCTS_DIR}/IBLocalizable/IBLocalizable.framework",
+				"${BUILT_PRODUCTS_DIR}/TPKeyboardAvoiding/TPKeyboardAvoiding.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CSUtils.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IBLocalizable.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TPKeyboardAvoiding.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
