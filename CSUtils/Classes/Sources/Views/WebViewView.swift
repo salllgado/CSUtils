@@ -41,6 +41,10 @@ open class WebViewView: UIView, NibBounded {
         self.layer.cornerRadius = 10
         if let customImage = customDismissImage {
             btnDismiss.setImage(customImage, for: .normal)
+            btnDismiss.setTitle("", for: .normal)
+        }
+        else {
+            btnDismiss.setTitle(NSLocalizedString("DISMISS_WEBVIEW_BUTTON", comment: ""), for: .normal)
         }
         
         loadWebsite()
