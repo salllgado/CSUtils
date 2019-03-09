@@ -10,6 +10,10 @@ import WebKit
 
 open class WebViewView: UIView, NibBounded {
     
+    @IBOutlet weak var wkWebView: WKWebView!
+    @IBOutlet weak var lbWebsiteTitle: UILabel!
+    @IBOutlet weak var btnDismiss: UIButton!
+    
     public var callbackActionDismiss: (()->Void)?
     public var customDismissImage: UIImage?
     public var customWebSite: String = "https://www.google.com" {
@@ -17,10 +21,6 @@ open class WebViewView: UIView, NibBounded {
             loadWebsite()
         }
     }
-    
-    @IBOutlet weak var wkWebView: WKWebView!
-    @IBOutlet weak var lbWebsiteTitle: UILabel!
-    @IBOutlet weak var btnDismiss: UIButton!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
