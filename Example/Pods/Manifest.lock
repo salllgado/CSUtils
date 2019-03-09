@@ -1,16 +1,27 @@
 PODS:
-  - CSUtils (1.1.2)
+  - CSUtils (1.1.3):
+    - IBLocalizable
+    - TPKeyboardAvoiding
+  - IBLocalizable (1.3.0)
+  - TPKeyboardAvoiding (1.3.2)
 
 DEPENDENCIES:
   - CSUtils (from `../`)
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - IBLocalizable
+    - TPKeyboardAvoiding
+
 EXTERNAL SOURCES:
   CSUtils:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  CSUtils: f57c6304d17a6576a5c4135bc36726cfb9bcf0ce
+  CSUtils: d438b40153ff22c43721a0a0462612f0add9a662
+  IBLocalizable: bebcf04d98f422a2544f2b000d19387dfe8c317b
+  TPKeyboardAvoiding: cb69d5ddbe90ce0170e4bc2db1e5e41d4a3ad9a4
 
 PODFILE CHECKSUM: 0294df814e38d3fabf21d945ea3716ae561e4934
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.6.0

@@ -32,6 +32,7 @@
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		6CF965712FAB9E969D3D02E8 /* Pods-CSUtils_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSUtils_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-CSUtils_Example/Pods-CSUtils_Example.release.xcconfig"; sourceTree = "<group>"; };
+		B862C5892193BE60006BEB3D /* CSUtils-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CSUtils-Bridging-Header.h"; sourceTree = "<group>"; };
 		B86A045D206BE3B2007B5BFD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 		B86A045E206BE3B3007B5BFD /* CSUtils.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = CSUtils.podspec; path = ../../CSUtils.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B86A045F206BE3B3007B5BFD /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../../LICENSE; sourceTree = "<group>"; };
@@ -103,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				607FACD41AFB9204008FA782 /* Info.plist */,
+				B862C5892193BE60006BEB3D /* CSUtils-Bridging-Header.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -177,7 +179,6 @@
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
 				B1EB39C56F377C8D18EE2751 /* [CP] Embed Pods Frameworks */,
-				BBE262DE1D6E986F0BA09CA5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -267,31 +268,20 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-CSUtils_Example/Pods-CSUtils_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-CSUtils_Example/Pods-CSUtils_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/CSUtils/CSUtils.framework",
+				"${BUILT_PRODUCTS_DIR}/IBLocalizable/IBLocalizable.framework",
+				"${BUILT_PRODUCTS_DIR}/TPKeyboardAvoiding/TPKeyboardAvoiding.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CSUtils.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IBLocalizable.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TPKeyboardAvoiding.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CSUtils_Example/Pods-CSUtils_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BBE262DE1D6E986F0BA09CA5 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CSUtils_Example/Pods-CSUtils_Example-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CSUtils_Example/Pods-CSUtils_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -455,6 +445,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = HT3YCTX6YE;
 				INFOPLIST_FILE = CSUtils/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -474,6 +465,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = HT3YCTX6YE;
 				INFOPLIST_FILE = CSUtils/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

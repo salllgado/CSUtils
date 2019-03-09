@@ -7,5 +7,7 @@
 */
 
 "OK!" = "OK!";
-"CANCEL" = "Cancelar";
-"DISMISS" = "Esquecer";
+"CANCEL" = "Cancel";
+"DISMISS" = "Dismiss";
+"CHANGE_STATUS_BAR_BUTTON" = "Change status bar color";
+"DISMISS_WEBVIEW_BUTTON" = "Dismiss";

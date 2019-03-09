@@ -23,36 +23,35 @@ class AlertExemplesController: UIViewController {
     }
 
     @IBAction func simpleAlertView(_ sender: Any) {
-        let alert = CSUtils.showAlertController(alertTitle, mensage: alertMensage, alertButtons: [.DISMISS], completion: { (_) -> Void? in return })
+        let alert = CSUtils.showAlertController(alertTitle, mensage: alertMensage, alertButtons: [.DISMISS], completion: { return })
         present(alert, animated: true, completion: nil)
     }
     
     @IBAction func simpleAlertWithAction(_ sender: Any) {
-        let alert = CSUtils.showAlertController(alertTitle, mensage: alertMensage, alertButtons: [.CANCEL, .OK], UIColor.red) {_ in
-            let alertBefore = CSUtils.showAlertController(self.alertTitle, mensage: self.alertMensage, alertButtons: [.DISMISS], completion: { (_) -> Void? in return })
+        let alert = CSUtils.showAlertController(alertTitle, mensage: alertMensage, alertButtons: [.CANCEL, .OK], UIColor.red) {
+            let alertBefore = CSUtils.showAlertController(self.alertTitle, mensage: self.alertMensage, alertButtons: [.DISMISS], completion: { return })
             self.present(alertBefore, animated: true, completion: nil)
-            return nil
         }
         present(alert, animated: true, completion: nil)
     }
     
     @IBAction func alertViewWithFields(_ sender: Any) {
-        let alert = CSUtils.showAlertControllerForLogin(alertTitle, mensage: alertMensage, alertButtons: [.CANCEL, .OK]) { (text) -> Void? in
-            var mensage: String!
-            if let text = text {
-                for actualText in text {
-                    if mensage != nil {
-                        mensage = mensage + "\n\(actualText)"
-                    }
-                    else {
-                        mensage = actualText
-                    }
+        let alertViewController = CSUtils.showAlertControllerForLogin(alertTitle, mensage: alertMensage, alertButtons: [.CANCEL, .OK]) { (texts) in
+            
+            var message: String?
+            for actualText in texts {
+                if message != nil {
+                    message = message! + "\n\(actualText)"
                 }
-                let alertBefore = CSUtils.showAlertController(nil, mensage: mensage, alertButtons: [.DISMISS], completion: { (_) -> Void? in return })
-                self.present(alertBefore, animated: true, completion: nil)
+                else {
+                    message = actualText
+                }
             }
-            return nil
+            
+            let alertBefore = CSUtils.showAlertController(nil, mensage: message!, alertButtons: [.DISMISS], completion: { return })
+            self.present(alertBefore, animated: true, completion: nil)
         }
-        present(alert, animated: true, completion: nil)
+        
+        present(alertViewController, animated: true, completion: nil)
     }
 }

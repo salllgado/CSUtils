@@ -11,8 +11,12 @@ import CSUtils
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var webViewView: WebViewView!
+    @IBOutlet weak var lcWebViewTopToView: NSLayoutConstraint!
     @IBOutlet weak var styleButtonExemple: UIButton!
     @IBOutlet weak var navigationBar: UINavigationBar!
+    
+    var webViewIsShowed: Bool = false
     
     private lazy var toastView = {
         return ToastView()
@@ -20,22 +24,54 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Change navbarStyle
         CSUtils.setNavBarStyle(navigationBar, barColor: UIColor.red, tintColor: UIColor.black)
     }
     
+    private func setStatusBarStyle(_ style: UIStatusBarStyle, backgroundColor: UIColor) {
+        if let statusBar = UIApplication.shared.value(forKey: "statusBar") as? UIView {
+            statusBar.backgroundColor = backgroundColor
+            statusBar.setValue(style == .lightContent ? UIColor.white : .black, forKey: "foregroundColor")
+        }
+    }
+    
+    private func handlerWebView() {
+        lcWebViewTopToView.constant = webViewIsShowed ? 0 : (webViewView.bounds.height * -1)
+        webViewIsShowed = !webViewIsShowed
+        
+        UIView.animate(withDuration: 0.8) {
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    /// Change uibutton style.
     @IBAction func showStylesView(_ sender: Any) {
         var arrayOfButtons: [UIButton] = []
         arrayOfButtons.append(styleButtonExemple)
         CSUtils.setButtonStyle(arrayOfButtons, textColor: UIColor.yellow, backgoundColor: UIColor.black, borderColor: UIColor.yellow, rounded: 10)
     }
     
-    
+    // Display custom toast view like android.
     @IBAction func actionShowToastView(_ sender: Any) {
-        self.toastView.configure(message: "TEXTO TEXTO TEXTO")
+        self.toastView.configure(message: "ToastView Text")
         
         self.showToastView(for: 4, completion: { (_) in
             self.removeToastView()
         })
+    }
+    
+    /// Change status bar color.
+    @IBAction func actionChangeStatusBarColor(_ sender: Any) {
+        self.setStatusBarStyle(.lightContent, backgroundColor: .black)
+    }
+    
+    @IBAction func actionShowWebView(_ sender: Any) {
+        handlerWebView()
+        webViewView.customWebSite = "https://facebook.com"
+        webViewView.callbackActionDismiss = {
+            self.handlerWebView()
+        }
     }
 }
 
@@ -67,4 +103,3 @@ extension ViewController {
         toastView.removeFromSuperview()
     }
 }
-

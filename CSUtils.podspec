@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CSUtils'
-  s.version          = '1.1.3'
+  s.version          = '1.1.4'
   s.summary          = 'Some utils for your code.'
 
 # This description is used to generate tags and improve search results.
@@ -36,7 +36,6 @@ TODO: Add long description of the pod here.
   #   'CSUtils' => ['CSUtils/Assets/*.png']
   # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'TPKeyboardAvoiding'
+  s.dependency 'IBLocalizable'
 end

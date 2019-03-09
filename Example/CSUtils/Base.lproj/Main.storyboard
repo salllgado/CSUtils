@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bUD-JM-rnh">
-    <device id="retina5_9" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bUD-JM-rnh">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,20 +11,20 @@
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="CSUtils_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y9p-vP-OgY">
-                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <items>
                                     <navigationItem title="Title" id="e2K-AT-fDD"/>
                                 </items>
                             </navigationBar>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="7UK-op-3qE">
-                                <rect key="frame" x="32" y="120" width="311" height="196"/>
+                                <rect key="frame" x="36" y="96" width="528" height="270"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rKG-z1-MTL">
-                                        <rect key="frame" x="0.0" y="0.0" width="311" height="44"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="528" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="CES-xa-qhO"/>
                                         </constraints>
@@ -39,38 +35,63 @@
                                             <segue destination="OtI-Ku-e9Y" kind="show" id="Dpb-O7-2KV"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RXb-TZ-nOZ">
-                                        <rect key="frame" x="0.0" y="60" width="311" height="44"/>
-                                        <state key="normal" title="JSON Exemples"/>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z7m-G8-Xng">
-                                        <rect key="frame" x="0.0" y="120" width="311" height="30"/>
+                                        <rect key="frame" x="0.0" y="60" width="528" height="44"/>
                                         <state key="normal" title="Show Style View"/>
                                         <connections>
                                             <action selector="showStylesView:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="nD0-zz-LWM"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SN6-CT-Kr9">
-                                        <rect key="frame" x="0.0" y="166" width="311" height="30"/>
+                                        <rect key="frame" x="0.0" y="120" width="528" height="44"/>
                                         <state key="normal" title="ToastView Test"/>
                                         <connections>
                                             <action selector="actionShowToastView:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Ch9-FF-TTZ"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jjy-T9-Ov2">
+                                        <rect key="frame" x="0.0" y="180" width="528" height="44"/>
+                                        <state key="normal" title="Status bar"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="CHANGE_STATUS_BAR_BUTTON"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizedString" value="CHANGE_STATUS_BAR_BUTTON"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizableString" value="CHANGE_STATUS_BAR_BUTTON"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="actionChangeStatusBarColor:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="TOO-3A-Owl"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEo-Ct-gDO">
+                                        <rect key="frame" x="0.0" y="240" width="528" height="30"/>
+                                        <state key="normal" title="Show Web View"/>
+                                        <connections>
+                                            <action selector="actionShowWebView:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="vD4-Vd-vet"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="RXb-TZ-nOZ" firstAttribute="height" secondItem="rKG-z1-MTL" secondAttribute="height" id="WIe-BL-V5f"/>
+                                    <constraint firstItem="Z7m-G8-Xng" firstAttribute="height" secondItem="rKG-z1-MTL" secondAttribute="height" id="4jO-00-Mdd"/>
+                                    <constraint firstItem="jjy-T9-Ov2" firstAttribute="height" secondItem="SN6-CT-Kr9" secondAttribute="height" id="Fgi-nY-eqx"/>
+                                    <constraint firstItem="SN6-CT-Kr9" firstAttribute="height" secondItem="Z7m-G8-Xng" secondAttribute="height" id="Msx-eU-EDG"/>
                                 </constraints>
                             </stackView>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ADv-Oc-ce0" customClass="WebViewView" customModule="CSUtils">
+                                <rect key="frame" x="0.0" y="600" width="600" height="480"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="7UK-op-3qE" firstAttribute="top" secondItem="y9p-vP-OgY" secondAttribute="bottom" constant="32" id="4W9-yd-4st"/>
                             <constraint firstItem="7UK-op-3qE" firstAttribute="centerX" secondItem="nuv-M1-QJG" secondAttribute="centerX" id="9CI-lD-fw1"/>
+                            <constraint firstItem="ADv-Oc-ce0" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="bottom" id="D8e-Nc-69h"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7UK-op-3qE" secondAttribute="trailing" constant="16" id="KNe-Vj-vEf"/>
+                            <constraint firstItem="ADv-Oc-ce0" firstAttribute="height" secondItem="kh9-bI-dsS" secondAttribute="height" multiplier="0.8" id="KVr-B7-2W0"/>
                             <constraint firstItem="nuv-M1-QJG" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="7UK-op-3qE" secondAttribute="bottom" constant="16" id="Kns-GN-abq"/>
+                            <constraint firstItem="ADv-Oc-ce0" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="NFw-pB-vJe"/>
                             <constraint firstItem="7UK-op-3qE" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="16" id="Qjd-wH-rvB"/>
+                            <constraint firstAttribute="trailing" secondItem="ADv-Oc-ce0" secondAttribute="trailing" id="cD5-C5-HUF"/>
                             <constraint firstItem="y9p-vP-OgY" firstAttribute="leading" secondItem="nuv-M1-QJG" secondAttribute="leading" id="lFU-Gt-S0v"/>
                             <constraint firstItem="y9p-vP-OgY" firstAttribute="trailing" secondItem="nuv-M1-QJG" secondAttribute="trailing" id="lul-Qd-iGv"/>
                             <constraint firstItem="y9p-vP-OgY" firstAttribute="top" secondItem="nuv-M1-QJG" secondAttribute="top" id="wxe-Gw-gUh"/>
@@ -80,8 +101,10 @@
                     <navigationItem key="navigationItem" id="PwC-8Z-yV3"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="lcWebViewTopToView" destination="D8e-Nc-69h" id="Ibd-Tr-mGJ"/>
                         <outlet property="navigationBar" destination="y9p-vP-OgY" id="h1Y-d9-6Jo"/>
                         <outlet property="styleButtonExemple" destination="Z7m-G8-Xng" id="zCH-li-uAq"/>
+                        <outlet property="webViewView" destination="ADv-Oc-ce0" id="Bgt-VK-pT3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
