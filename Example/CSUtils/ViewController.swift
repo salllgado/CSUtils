@@ -11,8 +11,12 @@ import CSUtils
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var webViewView: WebViewView!
+    @IBOutlet weak var lcWebViewTopToView: NSLayoutConstraint!
     @IBOutlet weak var styleButtonExemple: UIButton!
     @IBOutlet weak var navigationBar: UINavigationBar!
+    
+    var webViewIsShowed: Bool = false
     
     private lazy var toastView = {
         return ToastView()
@@ -29,6 +33,15 @@ class ViewController: UIViewController {
         if let statusBar = UIApplication.shared.value(forKey: "statusBar") as? UIView {
             statusBar.backgroundColor = backgroundColor
             statusBar.setValue(style == .lightContent ? UIColor.white : .black, forKey: "foregroundColor")
+        }
+    }
+    
+    private func handlerWebView() {
+        lcWebViewTopToView.constant = webViewIsShowed ? 0 : (webViewView.bounds.height * -1)
+        webViewIsShowed = !webViewIsShowed
+        
+        UIView.animate(withDuration: 0.8) {
+            self.view.layoutIfNeeded()
         }
     }
     
@@ -51,6 +64,14 @@ class ViewController: UIViewController {
     /// Change status bar color.
     @IBAction func actionChangeStatusBarColor(_ sender: Any) {
         self.setStatusBarStyle(.lightContent, backgroundColor: .black)
+    }
+    
+    @IBAction func actionShowEbView(_ sender: Any) {
+        handlerWebView()
+        webViewView.customWebSite = "https://facebook.com"
+        webViewView.callbackActionDismiss = {
+            self.handlerWebView()
+        }
     }
 }
 
