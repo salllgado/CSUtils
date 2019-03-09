@@ -25,7 +25,7 @@
                                 </items>
                             </navigationBar>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="7UK-op-3qE">
-                                <rect key="frame" x="32" y="120" width="311" height="224"/>
+                                <rect key="frame" x="32" y="120" width="311" height="270"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rKG-z1-MTL">
                                         <rect key="frame" x="0.0" y="0.0" width="311" height="44"/>
@@ -65,6 +65,13 @@
                                             <action selector="actionChangeStatusBarColor:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="TOO-3A-Owl"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEo-Ct-gDO">
+                                        <rect key="frame" x="0.0" y="240" width="311" height="30"/>
+                                        <state key="normal" title="Show Web View"/>
+                                        <connections>
+                                            <action selector="actionShowEbView:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="vD4-Vd-vet"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -73,14 +80,22 @@
                                     <constraint firstItem="SN6-CT-Kr9" firstAttribute="height" secondItem="Z7m-G8-Xng" secondAttribute="height" id="Msx-eU-EDG"/>
                                 </constraints>
                             </stackView>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ADv-Oc-ce0" customClass="WebViewView" customModule="CSUtils">
+                                <rect key="frame" x="0.0" y="812" width="375" height="649.66666666666652"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="7UK-op-3qE" firstAttribute="top" secondItem="y9p-vP-OgY" secondAttribute="bottom" constant="32" id="4W9-yd-4st"/>
                             <constraint firstItem="7UK-op-3qE" firstAttribute="centerX" secondItem="nuv-M1-QJG" secondAttribute="centerX" id="9CI-lD-fw1"/>
+                            <constraint firstItem="ADv-Oc-ce0" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="bottom" id="D8e-Nc-69h"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7UK-op-3qE" secondAttribute="trailing" constant="16" id="KNe-Vj-vEf"/>
+                            <constraint firstItem="ADv-Oc-ce0" firstAttribute="height" secondItem="kh9-bI-dsS" secondAttribute="height" multiplier="0.8" id="KVr-B7-2W0"/>
                             <constraint firstItem="nuv-M1-QJG" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="7UK-op-3qE" secondAttribute="bottom" constant="16" id="Kns-GN-abq"/>
+                            <constraint firstItem="ADv-Oc-ce0" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="NFw-pB-vJe"/>
                             <constraint firstItem="7UK-op-3qE" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="16" id="Qjd-wH-rvB"/>
+                            <constraint firstAttribute="trailing" secondItem="ADv-Oc-ce0" secondAttribute="trailing" id="cD5-C5-HUF"/>
                             <constraint firstItem="y9p-vP-OgY" firstAttribute="leading" secondItem="nuv-M1-QJG" secondAttribute="leading" id="lFU-Gt-S0v"/>
                             <constraint firstItem="y9p-vP-OgY" firstAttribute="trailing" secondItem="nuv-M1-QJG" secondAttribute="trailing" id="lul-Qd-iGv"/>
                             <constraint firstItem="y9p-vP-OgY" firstAttribute="top" secondItem="nuv-M1-QJG" secondAttribute="top" id="wxe-Gw-gUh"/>
@@ -90,8 +105,10 @@
                     <navigationItem key="navigationItem" id="PwC-8Z-yV3"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="lcWebViewTopToView" destination="D8e-Nc-69h" id="Ibd-Tr-mGJ"/>
                         <outlet property="navigationBar" destination="y9p-vP-OgY" id="h1Y-d9-6Jo"/>
                         <outlet property="styleButtonExemple" destination="Z7m-G8-Xng" id="zCH-li-uAq"/>
+                        <outlet property="webViewView" destination="ADv-Oc-ce0" id="Bgt-VK-pT3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
