@@ -6,11 +6,10 @@
 //
 
 import UIKit
-import WebKit
 
 open class WebViewView: UIView, NibBounded {
     
-    @IBOutlet weak var wkWebView: WKWebView!
+    @IBOutlet weak var wkWebView: UIWebView!
     @IBOutlet weak var lbWebsiteTitle: UILabel!
     @IBOutlet weak var btnDismiss: UIButton!
     
@@ -52,9 +51,8 @@ open class WebViewView: UIView, NibBounded {
     
     private func loadWebsite() {
         guard let url = URL(string: customWebSite) else { return }
-        wkWebView!.load(URLRequest(url: url))
-        wkWebView!.allowsBackForwardNavigationGestures = true
-        self.lbWebsiteTitle.text = wkWebView.url?.absoluteString ?? wkWebView.title
+        wkWebView.loadRequest(URLRequest(url: url))
+        self.lbWebsiteTitle.text = customWebSite
     }
     
     @IBAction func actionDismiss(_ sender: Any) {
