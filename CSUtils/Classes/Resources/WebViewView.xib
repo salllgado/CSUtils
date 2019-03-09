@@ -14,7 +14,7 @@
             <connections>
                 <outlet property="btnDismiss" destination="qHS-gG-q1X" id="Wm0-j6-u7z"/>
                 <outlet property="lbWebsiteTitle" destination="cCg-33-ZGS" id="nht-C0-LBD"/>
-                <outlet property="wkWebView" destination="nud-5Y-8xN" id="WuV-8k-gvy"/>
+                <outlet property="wkWebView" destination="kRL-tv-Heg" id="1Bz-S7-c4a"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -45,20 +45,16 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uay-e4-teZ" userLabel="Container WebView">
                     <rect key="frame" x="0.0" y="68" width="375" height="599"/>
                     <subviews>
-                        <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nud-5Y-8xN">
+                        <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kRL-tv-Heg">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="599"/>
-                            <color key="backgroundColor" red="0.36078431372549019" green="0.38823529411764707" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <wkWebViewConfiguration key="configuration">
-                                <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                <wkPreferences key="preferences"/>
-                            </wkWebViewConfiguration>
-                        </wkWebView>
+                            <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </webView>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="nud-5Y-8xN" firstAttribute="top" secondItem="Uay-e4-teZ" secondAttribute="top" id="CY4-WN-hbi"/>
-                        <constraint firstAttribute="trailing" secondItem="nud-5Y-8xN" secondAttribute="trailing" id="PJP-v6-00J"/>
-                        <constraint firstItem="nud-5Y-8xN" firstAttribute="leading" secondItem="Uay-e4-teZ" secondAttribute="leading" id="hBj-Q7-5bD"/>
-                        <constraint firstAttribute="bottom" secondItem="nud-5Y-8xN" secondAttribute="bottom" id="kya-Yg-d9g"/>
+                        <constraint firstItem="kRL-tv-Heg" firstAttribute="leading" secondItem="Uay-e4-teZ" secondAttribute="leading" id="NH8-1Z-e5E"/>
+                        <constraint firstItem="kRL-tv-Heg" firstAttribute="top" secondItem="Uay-e4-teZ" secondAttribute="top" id="lqi-Ax-B5a"/>
+                        <constraint firstAttribute="trailing" secondItem="kRL-tv-Heg" secondAttribute="trailing" id="ppP-oV-AFd"/>
+                        <constraint firstAttribute="bottom" secondItem="kRL-tv-Heg" secondAttribute="bottom" id="zRG-YB-uqq"/>
                     </constraints>
                 </view>
             </subviews>
