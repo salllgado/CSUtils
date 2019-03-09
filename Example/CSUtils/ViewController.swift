@@ -66,7 +66,7 @@ class ViewController: UIViewController {
         self.setStatusBarStyle(.lightContent, backgroundColor: .black)
     }
     
-    @IBAction func actionShowEbView(_ sender: Any) {
+    @IBAction func actionShowWebView(_ sender: Any) {
         handlerWebView()
         webViewView.customWebSite = "https://facebook.com"
         webViewView.callbackActionDismiss = {
