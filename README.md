@@ -1,7 +1,7 @@
 # CSUtils
 
 [![CI Status](http://img.shields.io/travis/salllgado@hotmail.com.br/CSUtils.svg?style=flat)](https://travis-ci.org/salllgado@hotmail.com.br/CSUtils)
-[![Version](https://img.shields.io/badge/version-1.1.4-yellow.svg)](http://cocoapods.org/pods/CSUtils)
+[![Version](https://img.shields.io/badge/version-1.1.5-yellow.svg)](http://cocoapods.org/pods/CSUtils)
 [![Platform](https://img.shields.io/badge/plataform-iOS%2010.0-yellow.svg)](http://cocoapods.org/pods/CSUtils)
 
 ## Features
@@ -15,7 +15,7 @@
 - Create Alert Controller with text fields easy.
 - Get Localized String more easy.
 - Change Navigation Bar color easy.
-
+- QRCodeController to get data from QRCode.
 
 ## Example
 

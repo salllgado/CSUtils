@@ -35,6 +35,9 @@
 		65CAF20C0B02D5FA20F45AA2FF1BC30A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8168E3919AF0A9C9F988B2B2693A6BE /* Foundation.framework */; };
 		6DE4397AAAC09CA75829BF83062D7447 /* CSUtils-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 217ECC32AD6324662998014B5D1EAC07 /* CSUtils-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6F44DBC533E9E071E5ECDA1857C4799A /* TPKeyboardAvoidingCollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = 177C8C3AEAD9342B60A1DC6A639B4496 /* TPKeyboardAvoidingCollectionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		78D1EABA223977C900DFE490 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D1EAB9223977C900DFE490 /* QRCodeViewController.swift */; };
+		78D1EABE22397DCC00DFE490 /* QRCode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78D1EABD22397DCC00DFE490 /* QRCode.storyboard */; };
+		78D1EAC022398B7000DFE490 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78D1EABF22398B7000DFE490 /* Assets.xcassets */; };
 		8AC00F3239CE6C01A14C072D71902FEE /* IBLocalizable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08CA2EE0298473EB5A2ED9C513B5BC78 /* IBLocalizable.framework */; };
 		8C969AE62EA62C7FDAEF083465362FBA /* CSUtils+StringCasts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCB012F64D2749FE9D3AC01408D701E /* CSUtils+StringCasts.swift */; };
 		9034E8678CD2111419C0CB5B82B0EB6A /* CSUtils-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 795B7D9FDD1BB563C0DDF59AE2348B36 /* CSUtils-dummy.m */; };
@@ -127,6 +130,9 @@
 		6E49F5D9E3EB972F782FC21FD2208502 /* LocalizableUISearchBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocalizableUISearchBar.swift; path = IBLocalizable/Views/LocalizableUISearchBar.swift; sourceTree = "<group>"; };
 		6FBA72199F5F86657F52B0EA1DFD949B /* TPKeyboardAvoidingTableView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TPKeyboardAvoidingTableView.m; path = TPKeyboardAvoiding/TPKeyboardAvoidingTableView.m; sourceTree = "<group>"; };
 		7254CF2B31612E03A0E923E2C5FB9F4D /* Pods_CSUtils_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CSUtils_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		78D1EAB9223977C900DFE490 /* QRCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
+		78D1EABD22397DCC00DFE490 /* QRCode.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QRCode.storyboard; sourceTree = "<group>"; };
+		78D1EABF22398B7000DFE490 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		795B7D9FDD1BB563C0DDF59AE2348B36 /* CSUtils-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CSUtils-dummy.m"; sourceTree = "<group>"; };
 		7DC7A1546A1206AB5548BAD34D554E38 /* UIScrollView+TPKeyboardAvoidingAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+TPKeyboardAvoidingAdditions.h"; path = "TPKeyboardAvoiding/UIScrollView+TPKeyboardAvoidingAdditions.h"; sourceTree = "<group>"; };
 		7DD05F9DBA29441F045B00449311D624 /* ToastView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
@@ -377,6 +383,8 @@
 			children = (
 				A49FAB316773B45529CCB4F7F06F6C8C /* ToastView.xib */,
 				C0CFBB33C27D6748465158F2C64A8654 /* WebViewView.xib */,
+				78D1EABD22397DCC00DFE490 /* QRCode.storyboard */,
+				78D1EABF22398B7000DFE490 /* Assets.xcassets */,
 			);
 			name = Resources;
 			path = CSUtils/Classes/Resources;
@@ -430,6 +438,7 @@
 		DD9FCBDF3CDE43870C6BF73DAB1CB5D6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				78D1EAB9223977C900DFE490 /* QRCodeViewController.swift */,
 				7DD05F9DBA29441F045B00449311D624 /* ToastView.swift */,
 				175B3C1AC0B719C902DF37049FA5E58F /* WebViewView.swift */,
 			);
@@ -623,6 +632,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78D1EAC022398B7000DFE490 /* Assets.xcassets in Resources */,
+				78D1EABE22397DCC00DFE490 /* QRCode.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -665,6 +676,7 @@
 				4F647F474302C3196882B7FC25989D3F /* CSUtils.swift in Sources */,
 				4B4E2ABAF4F5F5BA5FB880212D45D321 /* NibBounded.swift in Sources */,
 				0F956313C03CD256B930556CD22A0FDC /* NibLoadableView.swift in Sources */,
+				78D1EABA223977C900DFE490 /* QRCodeViewController.swift in Sources */,
 				0ADA8ED365C4AC8A62769CCD55683322 /* ToastView.swift in Sources */,
 				B9E65EBC9780B2C02FC08952E0305C96 /* ToastView.xib in Sources */,
 				626B50F5171EF94ABFBC0B6FECFC99F3 /* UIViewController+StatusBarColor.swift in Sources */,

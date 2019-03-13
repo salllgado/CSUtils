@@ -73,6 +73,31 @@ class ViewController: UIViewController {
             self.handlerWebView()
         }
     }
+    
+    @IBAction func actionShowQRCodeView(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "QRCode", bundle: Bundle(for: QRCodeViewController.classForCoder()))
+        let navigationController = storyboard.instantiateInitialViewController() as! UINavigationController
+        let controller = navigationController.viewControllers.first as! QRCodeViewController
+        
+        controller.navigationBarColor = .black
+        controller.navigationBarItemColor = .yellow
+        controller.callbackError = { errorMessage in
+            self.dismiss(animated: true, completion: nil)
+            let alert = CSAlerts().buildAlert(title: "Erro", mensage: errorMessage, alertButtons: [.DISMISS], completion: {
+                // ...
+            })
+            self.present(alert, animated: true, completion: nil)
+        }
+        
+        controller.callbackResult = { resultText in
+            self.dismiss(animated: true, completion: nil)
+            let alert = CSAlerts().buildAlert(title: "Erro", mensage: resultText, alertButtons: [.DISMISS], completion: {
+                // ...
+            })
+            self.present(alert, animated: true, completion: nil)
+        }
+        self.present(navigationController, animated: true, completion: nil)
+    }
 }
 
 extension ViewController {
