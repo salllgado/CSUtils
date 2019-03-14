@@ -13,3 +13,4 @@
 "MENSAGEM_ALERTA_TESTE" = "Mensagem";
 "CHANGE_STATUS_BAR_BUTTON" = "Mudar a cor da status bar";
 "DISMISS_WEBVIEW_BUTTON" = "Fechar";
+"BAR_BUTTON_DISMISS" = "Fechar";

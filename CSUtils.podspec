@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CSUtils'
-  s.version          = '1.1.4'
-  s.summary          = 'Some utils for your code.'
+  s.version          = '1.1.5'
+  s.summary          = 'Utils framework for iOS.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -22,7 +22,6 @@ TODO: Add long description of the pod here.
                        DESC
 
   s.homepage         = 'https://github.com/salllgado@hotmail.com.br/CSUtils'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'salllgado@hotmail.com.br' => 'Chrystian Salgado' }
   s.source           = { :git => 'https://github.com/salllgado@hotmail.com.br/CSUtils.git', :tag => s.version.to_s }
@@ -31,6 +30,7 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '10.0'
 
   s.source_files = 'CSUtils/Classes/**/*'
+  s.resources = 'CSUtils/Assets/*'
   
   # s.resource_bundles = {
   #   'CSUtils' => ['CSUtils/Assets/*.png']
