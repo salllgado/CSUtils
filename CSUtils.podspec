@@ -30,6 +30,7 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '10.0'
 
   s.source_files = 'CSUtils/Classes/**/*'
+  s.resources = 'CSUtils/Assets/*'
   
   # s.resource_bundles = {
   #   'CSUtils' => ['CSUtils/Assets/*.png']
