@@ -14,10 +14,20 @@ open class WebViewView: UIView, NibBounded {
     @IBOutlet weak var btnDismiss: UIButton!
     
     public var callbackActionDismiss: (()->Void)?
-    public var customDismissImage: UIImage?
+    public var customDismissImage: UIImage? {
+        didSet {
+            guard let _customDismissImage = customDismissImage else { return }
+            btnDismiss.setImage(_customDismissImage, for: .normal)
+        }
+    }
     public var customWebSite: String = "https://www.google.com" {
         didSet {
             loadWebsite()
+        }
+    }
+    public var viewCornerRadius: CGFloat = 10 {
+        didSet {
+            self.layer.cornerRadius = viewCornerRadius
         }
     }
     
@@ -37,7 +47,7 @@ open class WebViewView: UIView, NibBounded {
     }
     
     private func createWebView() {
-        self.layer.cornerRadius = 10
+        self.layer.cornerRadius = viewCornerRadius
         if let customImage = customDismissImage {
             btnDismiss.setImage(customImage, for: .normal)
             btnDismiss.setTitle("", for: .normal)
