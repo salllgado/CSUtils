@@ -17,6 +17,7 @@ open class WebViewView: UIView, NibBounded {
     public var customDismissImage: UIImage? {
         didSet {
             guard let _customDismissImage = customDismissImage else { return }
+            btnDismiss.setTitle("", for: .normal)
             btnDismiss.setImage(_customDismissImage, for: .normal)
         }
     }

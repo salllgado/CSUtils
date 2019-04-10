@@ -68,6 +68,7 @@ class ViewController: UIViewController {
     
     @IBAction func actionShowWebView(_ sender: Any) {
         handlerWebView()
+        webViewView.customDismissImage = UIImage(named: "ic_dismiss", in: Bundle.main, compatibleWith: nil)
         webViewView.customWebSite = "https://facebook.com"
         webViewView.callbackActionDismiss = {
             self.handlerWebView()
