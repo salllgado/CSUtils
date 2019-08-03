@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,7 +17,6 @@
 		B86A0462206BE3B3007B5BFD /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = B86A045F206BE3B3007B5BFD /* LICENSE */; };
 		B8F26B13208232F6006D9BFB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B8F26B15208232F6006D9BFB /* Localizable.strings */; };
 		B8F26B252082A632006D9BFB /* AlertExemples.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8F26B242082A632006D9BFB /* AlertExemples.storyboard */; };
-		B8F26B2E2082A94C006D9BFB /* AlertExemplesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F26B2D2082A94C006D9BFB /* AlertExemplesController.swift */; };
 		F1F3E670A87E69119F4CF8EE /* Pods_CSUtils_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9FCFA4AE18E2743949CD441 /* Pods_CSUtils_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,7 +40,6 @@
 		B8F26B17208233DE006D9BFB /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		B8F26B18208233DE006D9BFB /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		B8F26B242082A632006D9BFB /* AlertExemples.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AlertExemples.storyboard; sourceTree = "<group>"; };
-		B8F26B2D2082A94C006D9BFB /* AlertExemplesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertExemplesController.swift; sourceTree = "<group>"; };
 		BA92EFDB67ED1AECF13F1D22 /* Pods_CSUtils_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CSUtils_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C96DE620EA4C4B8A8271003D /* Pods-CSUtils_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSUtils_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CSUtils_Tests/Pods-CSUtils_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		E9FCFA4AE18E2743949CD441 /* Pods_CSUtils_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CSUtils_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,7 +133,6 @@
 				B8F26B10208232A7006D9BFB /* Locale */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
-				B8F26B2D2082A94C006D9BFB /* AlertExemplesController.swift */,
 			);
 			name = Sources;
 			sourceTree = "<group>";
@@ -211,6 +208,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 				"pt-BR",
@@ -267,21 +265,16 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-CSUtils_Example/Pods-CSUtils_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/CSUtils/CSUtils.framework",
-				"${BUILT_PRODUCTS_DIR}/IBLocalizable/IBLocalizable.framework",
-				"${BUILT_PRODUCTS_DIR}/TPKeyboardAvoiding/TPKeyboardAvoiding.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CSUtils_Example/Pods-CSUtils_Example-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CSUtils.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IBLocalizable.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TPKeyboardAvoiding.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CSUtils_Example/Pods-CSUtils_Example-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CSUtils_Example/Pods-CSUtils_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CSUtils_Example/Pods-CSUtils_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -291,7 +284,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8F26B2E2082A94C006D9BFB /* AlertExemplesController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
